@@ -20,7 +20,6 @@ composer.lock
 
 /public/wallets/*.pkpass
 /public/qrcodes/*.png
-.env.example
 
 
 
