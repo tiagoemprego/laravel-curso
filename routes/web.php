@@ -1,10 +1,67 @@
 <?php
 
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/categorias/{id}', function ($id){
+    $cats = DB::table('categorias')->orderBy('id', 'desc')->get();
+
+    return $cats;
+
+//    foreach ($cats as $c){
+//        echo "id ". $c->id . "; ";
+//        echo "nome ". $c->nome;
+//        echo "<br />";
+//    }
+//    echo "<hr>";
+//
+//    $nome = DB::table('categorias')->pluck('nome');
+//    foreach ($nome as $n){
+//        echo $n."<br />";
+//    }
+//    echo "<hr>";
+//
+//    $dados = DB::table('categorias')->where('id',$id)->get();
+//    foreach ($dados as $d){
+//        echo "id ". $d->id . "; ";
+//        echo "nome ". $d->nome;
+//        echo "<br />";
+//    }
+//    echo "<hr>";
+//
+//    echo "<p>retorna um array utilizando o like</p>";
+//    $cats = DB::table('categorias')->where('nome','like','%rf%')->get();
+//
+//    foreach ($cats as $cc){
+//        echo "id ". $cc->id . "; ";
+//        echo "nome ". $cc->nome;
+//        echo "<br />";
+//    }
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //Route::get('/nome', 'MeuControlador@getNome');
 //
@@ -12,13 +69,13 @@ Route::get('/', function () {
 //
 //Route::post('/cliente/requisitar', 'ClienteControlador@requisitar');
 
-
-Route::get('/email/{email}', function (){
-    if (View::exists('email'))
-        return view('email', compact('email'));
-    else
-        return "Essa pagina não existe!";
-});
+//
+//Route::get('/email/{email}', function (){
+//    if (View::exists('email'))
+//        return view('email', compact('email'));
+//    else
+//        return "Essa pagina não existe!";
+//});
 
 
 
