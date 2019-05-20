@@ -1,47 +1,89 @@
 <?php
 
-use Illuminate\Support\Facades\DB;
+//use App\Support\Facades\DB;
+
+use App\Categoria;
 
 Route::get('/', function () {
-    return view('welcome');
+    $categorias = Categoria::all();
+    return $categorias;
 });
 
-Route::get('/categorias/{id}', function ($id){
-    $cats = DB::table('categorias')->orderBy('id', 'desc')->get();
+Route::get('/inserir/{nome}', function ($nome){
+    $cat = new Categoria();
+    $cat->nome = $nome;
+    $cat->save();
 
-    return $cats;
-
-//    foreach ($cats as $c){
-//        echo "id ". $c->id . "; ";
-//        echo "nome ". $c->nome;
-//        echo "<br />";
-//    }
-//    echo "<hr>";
-//
-//    $nome = DB::table('categorias')->pluck('nome');
-//    foreach ($nome as $n){
-//        echo $n."<br />";
-//    }
-//    echo "<hr>";
-//
-//    $dados = DB::table('categorias')->where('id',$id)->get();
-//    foreach ($dados as $d){
-//        echo "id ". $d->id . "; ";
-//        echo "nome ". $d->nome;
-//        echo "<br />";
-//    }
-//    echo "<hr>";
-//
-//    echo "<p>retorna um array utilizando o like</p>";
-//    $cats = DB::table('categorias')->where('nome','like','%rf%')->get();
-//
-//    foreach ($cats as $cc){
-//        echo "id ". $cc->id . "; ";
-//        echo "nome ". $cc->nome;
-//        echo "<br />";
-//    }
-
+    return redirect('/');
 });
+
+Route::get('/categoria/{id}', function ($id){
+    $cat = Categoria::find($id);
+    if (isset($cat))
+        return $cat;
+    else
+        echo "<h1>A categoria com id: $id não existe!</h1>";
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Route::get('/categorias/{id}', function ($id){
+//    $cats = DB::table('categorias')->orderBy('id', 'desc')->get();
+//
+//    return $cats;
+//
+////    foreach ($cats as $c){
+////        echo "id ". $c->id . "; ";
+////        echo "nome ". $c->nome;
+////        echo "<br />";
+////    }
+////    echo "<hr>";
+////
+////    $nome = DB::table('categorias')->pluck('nome');
+////    foreach ($nome as $n){
+////        echo $n."<br />";
+////    }
+////    echo "<hr>";
+////
+////    $dados = DB::table('categorias')->where('id',$id)->get();
+////    foreach ($dados as $d){
+////        echo "id ". $d->id . "; ";
+////        echo "nome ". $d->nome;
+////        echo "<br />";
+////    }
+////    echo "<hr>";
+////
+////    echo "<p>retorna um array utilizando o like</p>";
+////    $cats = DB::table('categorias')->where('nome','like','%rf%')->get();
+////
+////    foreach ($cats as $cc){
+////        echo "id ". $cc->id . "; ";
+////        echo "nome ". $cc->nome;
+////        echo "<br />";
+////    }
+//
+//});
 
 
 
