@@ -25,6 +25,11 @@ Route::get('/categoria/{id}', function ($id){
         echo "<h1>A categoria com id: $id não existe!</h1>";
 });
 
+Route::get('/admin', function (){
+    return view('admin.index');
+});
+
+
 
 
 

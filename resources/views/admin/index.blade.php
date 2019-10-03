@@ -12,15 +12,15 @@
   <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
 
   <!-- Core stylesheets -->
-  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link href="css/pixeladmin.min.css" rel="stylesheet" type="text/css">
-  <link href="css/widgets.min.css" rel="stylesheet" type="text/css">
+  <link href="css/admin/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="css/admin/pixeladmin.min.css" rel="stylesheet" type="text/css">
+  <link href="css/admin/widgets.min.css" rel="stylesheet" type="text/css">
 
   <!-- Theme -->
-  <link href="css/themes/clean.min.css" rel="stylesheet" type="text/css">
+  <link href="css/admin/themes/clean.min.css" rel="stylesheet" type="text/css">
 
   <!-- Pace.js -->
-  <script src="pace/pace.min.js"></script>
+  <script src="js/admin/pace/pace.min.js"></script>
 </head>
 <body>
   <!-- Nav -->
@@ -51,7 +51,7 @@
 
     <div class="collapse navbar-collapse" id="px-navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="#">Link</a></a>
+        <li><a href="#">Link</a></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
@@ -77,6 +77,120 @@
     </div>
 
     <div>Content</div>
+      <div class="row">
+          <div class="col-md-6">
+              <div class="table-success">
+                  <div class="table-header">
+                      <div class="table-caption">
+                          Success Table
+                      </div>
+                  </div>
+                  <table class="table table-bordered">
+                      <thead>
+                      <tr>
+                          <th>#</th>
+                          <th>First Name</th>
+                          <th>Last Name</th>
+                          <th>Username</th>
+                          <th>active</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                          <td>1</td>
+                          <td>Mark</td>
+                          <td>Otto</td>
+                          <td></td>
+                          <td>
+                              <label class="switcher switcher-blank">
+                                  <input type="checkbox" checked="">
+                                  <div class="switcher-indicator">
+                                      <div class="switcher-yes">YES</div>
+                                      <div class="switcher-no">NO</div>
+                                  </div>
+                              </label>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>2</td>
+                          <td>Jacob</td>
+                          <td>Thornton</td>
+                          <td>@fat</td>
+                          <td>
+                              <label class="switcher switcher-blank">
+                                  <input type="checkbox" checked="">
+                                  <div class="switcher-indicator">
+                                      <div class="switcher-yes">YES</div>
+                                      <div class="switcher-no">NO</div>
+                                  </div>
+                              </label>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>3</td>
+                          <td>Larry</td>
+                          <td>the Bird</td>
+                          <td>@twitter</td>
+                          <td>
+                              <label class="switcher switcher-blank">
+                                  <input type="checkbox" checked="">
+                                  <div class="switcher-indicator">
+                                      <div class="switcher-yes">YES</div>
+                                      <div class="switcher-no">NO</div>
+                                  </div>
+                              </label>
+                          </td>
+                      </tr>
+                      </tbody>
+                  </table>
+                  <div class="table-footer">
+                      Footer
+                  </div>
+              </div>
+          </div>
+{{--          <div class="col-md-6">--}}
+{{--              <div class="table-danger">--}}
+{{--                  <div class="table-header">--}}
+{{--                      <div class="table-caption">--}}
+{{--                          Danger Table--}}
+{{--                      </div>--}}
+{{--                  </div>--}}
+{{--                  <table class="table table-bordered">--}}
+{{--                      <thead>--}}
+{{--                      <tr>--}}
+{{--                          <th>#</th>--}}
+{{--                          <th>First Name</th>--}}
+{{--                          <th>Last Name</th>--}}
+{{--                          <th>Username</th>--}}
+{{--                      </tr>--}}
+{{--                      </thead>--}}
+{{--                      <tbody>--}}
+{{--                      <tr>--}}
+{{--                          <td>1</td>--}}
+{{--                          <td>Mark</td>--}}
+{{--                          <td>Otto</td>--}}
+{{--                          <td>@mdo</td>--}}
+{{--                      </tr>--}}
+{{--                      <tr>--}}
+{{--                          <td>2</td>--}}
+{{--                          <td>Jacob</td>--}}
+{{--                          <td>Thornton</td>--}}
+{{--                          <td>@fat</td>--}}
+{{--                      </tr>--}}
+{{--                      <tr>--}}
+{{--                          <td>3</td>--}}
+{{--                          <td>Larry</td>--}}
+{{--                          <td>the Bird</td>--}}
+{{--                          <td>@twitter</td>--}}
+{{--                      </tr>--}}
+{{--                      </tbody>--}}
+{{--                  </table>--}}
+{{--                  <div class="table-footer">--}}
+{{--                      Footer--}}
+{{--                  </div>--}}
+{{--              </div>--}}
+{{--          </div>--}}
+      </div>
   </div>
 
   <!-- Footer -->
@@ -94,10 +208,10 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   <!-- Core scripts -->
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/pixeladmin.min.js"></script>
+  <script src="js/admin/js/bootstrap.min.js"></script>
+  <script src="js/admin/js/pixeladmin.min.js"></script>
 
   <!-- Your scripts -->
-  <script src="js/app.js"></script>
+  <script src="js/admin/js/app.js"></script>
 </body>
 </html>
